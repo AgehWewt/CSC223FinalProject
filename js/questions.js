@@ -28,12 +28,12 @@ export class Question {
      * @returns {string} - Returns generated HTML including the question and answer with radio buttons
      */
     generateHTML() {
-        let questionDiv = document.createElement("div");
-        questionDiv.className = "question";
+        let questionForm = document.createElement("form");
+        questionForm.className = "question";
 
         let questionText = document.createElement("p");
         questionText.innerHTML = this.question;
-        questionDiv.appendChild(questionText);
+        questionForm.appendChild(questionText);
 
         for(let i = 0; i < this.answers.length; i++) {
             let answer = this.randomAnswers[i];
@@ -44,33 +44,25 @@ export class Question {
             answerInput.name = "answer";
             answerInput.value = answer;
             answerInput.dataset.index = i;
-            if (i === 0) {
-                answerInput.required = true;
-            }
+            answerInput.required = true;
 
             answerLabel.appendChild(answerInput);
             answerLabel.appendChild(document.createTextNode(answer))
 
-            questionDiv.appendChild(answerLabel);
-            questionDiv.appendChild(document.createElement("br"));
+            questionForm.appendChild(answerLabel);
+            questionForm.appendChild(document.createElement("br"));
         }
 
-        let submitButton = document.createElement("input");
-        submitButton.type = "button";
-        submitButton.name = "submit";
-        submitButton.value = "Submit";
-        questionDiv.appendChild(submitButton);
-
-        return questionDiv;
+        return questionForm;
     }
 
     /**
      * Checks to see if the selected index is the correct index
-     * @param {int} index - Index of the selected answer
+     * @param {string} answer - String of the selected answer
      * @returns {boolean} - Returns true if answer is correct, false if not
      */
-    checkAnswer(index) {
-        if (this.randomAnswers[this.correct] === this.randomAnswers[index])
+    checkAnswer(answer) {
+        if (this.randomAnswers[this.correct] === this.randomAnswers[this.randomAnswers.indexOf(answer)])
         {
             return true;
         } else {

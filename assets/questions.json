@@ -2,7 +2,6 @@
     "questions":
     [
         {
-            "id": "q1",
             "question": "What should you do if you see an emergency vehicle approaching with flashing lights?",
             "answers": [
                 "Continue driving at the same speed",
@@ -13,7 +12,6 @@
             "correct": 1
         },
         {
-            "id": "q2",
             "question": "What is the legal blood alcohol concentration limit for drivers over 21 in most states?",
             "answers": [
                 "0.08%",
@@ -24,7 +22,6 @@
             "correct": 0
         },
         {
-            "id": "q3",
             "question": "When are you allowed to pass another vehicle on the right?",
             "answers": [
                 "When the vehicle ahead is making a left turn",
@@ -35,7 +32,6 @@
             "correct": 3
         },
         {
-            "id": "q4",
             "question": "At a four-way stop, who goes first?",
             "answers": [
                 "The driver on the left",
@@ -46,7 +42,6 @@
             "correct": 2
         },
         {
-            "id": "q5",
             "question": "What does a flashing yellow traffic light mean?",
             "answers": [
                 "Proceed with caution",
@@ -57,7 +52,6 @@
             "correct": 0
         },
         {
-            "id": "q6",
             "question": "Which of the following is true regarding seat belts?",
             "answers": [
                 "They are optional for drivers over 18",
@@ -68,7 +62,6 @@
             "correct": 3
         },
         {
-            "id": "q7",
             "question": "What is the minimum following distance under ideal driving conditions?",
             "answers": [
                 "2 seconds",
@@ -79,7 +72,6 @@
             "correct": 1
         },
         {
-            "id": "q8",
             "question": "What should you do when approaching a pedestrian crossing?",
             "answers": [
                 "Increase speed to clear the area quickly",
@@ -90,7 +82,6 @@
             "correct": 2
         },
         {
-            "id": "q9",
             "question": "What action should you take when driving in fog?",
             "answers": [
                 "Use your high beams",
@@ -101,7 +92,6 @@
             "correct": 1
         },
         {
-            "id": "q10",
             "question": "How often should you check your rearview and side mirrors?",
             "answers": [
                 "Every 2-3 minutes",
