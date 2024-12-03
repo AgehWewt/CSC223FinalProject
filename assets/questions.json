@@ -1,3 +1,115 @@
 {
-    
+    "questions":
+    [
+        {
+            "id": "q1",
+            "question": "What should you do if you see an emergency vehicle approaching with flashing lights?",
+            "answers": [
+                "Continue driving at the same speed",
+                "Pull over to the side of the road and stop",
+                "Increase your speed to clear the lane",
+                "Stop your vehicle immediately, wherever you are"
+            ],
+            "correct": 1
+        },
+        {
+            "id": "q2",
+            "question": "What is the legal blood alcohol concentration limit for drivers over 21 in most states?",
+            "answers": [
+                "0.08%",
+                "0.05%",
+                "0.1%",
+                "There is no specific"
+            ],
+            "correct": 0
+        },
+        {
+            "id": "q3",
+            "question": "When are you allowed to pass another vehicle on the right?",
+            "answers": [
+                "When the vehicle ahead is making a left turn",
+                "On a one-way street",
+                "When driving in a lane set for right turns only",
+                "All of the above"
+            ],
+            "correct": 3
+        },
+        {
+            "id": "q4",
+            "question": "At a four-way stop, who goes first?",
+            "answers": [
+                "The driver on the left",
+                "The driver on the right",
+                "The driver who stopped first",
+                "The driver with the largest vehicle"
+            ],
+            "correct": 2
+        },
+        {
+            "id": "q5",
+            "question": "What does a flashing yellow traffic light mean?",
+            "answers": [
+                "Proceed with caution",
+                "Stop and wait for the light to turn green",
+                "Speed up to clear the intersection",
+                "Traffic light is out of order"
+            ],
+            "correct": 0
+        },
+        {
+            "id": "q6",
+            "question": "Which of the following is true regarding seat belts?",
+            "answers": [
+                "They are optional for drivers over 18",
+                "They are not effective in preventing injuries",
+                "They increase the risk of injury in a crash",
+                "They should be worn at all times by all passengers"
+            ],
+            "correct": 3
+        },
+        {
+            "id": "q7",
+            "question": "What is the minimum following distance under ideal driving conditions?",
+            "answers": [
+                "2 seconds",
+                "3 seconds",
+                "5 seconds",
+                "1 second"
+            ],
+            "correct": 1
+        },
+        {
+            "id": "q8",
+            "question": "What should you do when approaching a pedestrian crossing?",
+            "answers": [
+                "Increase speed to clear the area quickly",
+                "Honk to alert the pedestrian",
+                "Yield the right-of-way to pedestrians",
+                "Continue at the same speed"
+            ],
+            "correct": 2
+        },
+        {
+            "id": "q9",
+            "question": "What action should you take when driving in fog?",
+            "answers": [
+                "Use your high beams",
+                "Use your low beams",
+                "Turn on your hazard lights",
+                "Follow other vehicles closely to stay visible"
+            ],
+            "correct": 1
+        },
+        {
+            "id": "q10",
+            "question": "How often should you check your rearview and side mirrors?",
+            "answers": [
+                "Every 2-3 minutes",
+                "Only when changing lanes",
+                "Frequently, to stay aware of your surroundings",
+                "Only when you hear an emergency vehicle"
+            ],
+            "correct": 2
+        }
+    ]
 }
