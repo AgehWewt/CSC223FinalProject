@@ -95,6 +95,10 @@ submitButton.onclick = () => {
     
 }
 
+/**
+ * Goes to the next question in the array or generates the results if at the end
+ * @returns 
+ */
 nextButton.onclick = () => {
     
     questionIndex++;
@@ -114,6 +118,9 @@ nextButton.onclick = () => {
     submitButton.hidden = false;
 }
 
+/**
+ * Resets the quiz to the beginning
+ */
 retryButton.onclick = () => {
     for (let ele of quizElement.children) {
         quizElement.removeChild(ele);
@@ -123,6 +130,9 @@ retryButton.onclick = () => {
     startButton.click();
 }
 
+/**
+ * Generates the results at the end of the quiz
+ */
 function generateResults() {
     nextButton.hidden = true;
     progress.hidden = true;
