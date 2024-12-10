@@ -29,10 +29,11 @@ export class Question {
      */
     generateHTML() {
         let questionForm = document.createElement("form");
-        questionForm.className = "question";
-
+        questionForm.className = "qForm";
+        
         let questionText = document.createElement("p");
         questionText.innerHTML = this.question;
+        questionText.className = "question";
         questionForm.appendChild(questionText);
 
         for(let i = 0; i < this.answers.length; i++) {
@@ -45,6 +46,8 @@ export class Question {
             answerInput.value = answer;
             answerInput.dataset.index = i;
             answerInput.required = true;
+
+            answerLabel.className = "answer";
 
             answerLabel.appendChild(answerInput);
             answerLabel.appendChild(document.createTextNode(answer))
@@ -68,5 +71,13 @@ export class Question {
         } else {
             return false;
         }
+    }
+
+    /**
+     * 
+     * @returns the correct answer
+     */
+    getCorrect() {
+        return this.randomAnswers[this.correct];
     }
 }
