@@ -11,6 +11,7 @@ let progress = document.getElementById("progress");
 
 let questionIndex = 0;
 let numCorrect = 0;
+let personalBest = 0;
 /**
  * Gets the questions from questions.json and sets up the quiz
  */
@@ -34,7 +35,19 @@ function setupQuiz(questions) {
     }
     questionsArray.sort(() => Math.random() - 0.5);
 
-    
+    if (document.cookie) {
+        let fields = {};
+        let cookieList = document.cookie.split("; ");
+        for (let items of cookieList) {
+            let cookie = items.split("=");
+            let name = cookie[0];
+            let value = cookie[1];
+            fields[name] = value;
+        }
+        personalBest = fields.pb;
+
+        progress.innerHTML = "Personal best: " + personalBest + "/" + questionsArray.length;
+    }
 }
 
 /**
@@ -49,6 +62,7 @@ startButton.onclick = () => {
     submitButton.hidden = false;
     quizElement.appendChild(questionsArray[questionIndex].generateHTML());
     progress.innerHTML = (questionIndex + 1) + "/" + questionsArray.length;
+
 }
 
 /**
@@ -90,7 +104,7 @@ nextButton.onclick = () => {
     
     quizElement.removeChild(document.getElementsByClassName("qForm")[0]);
 
-    if (questionIndex >= 1) {
+    if (questionIndex >= questionsArray.length) {
         generateResults();
         return;
     }
@@ -121,18 +135,33 @@ function generateResults() {
     numCorrectText.innerHTML = "You got " + numCorrect + "/" + questionsArray.length + " correct!";
     
     
-    if (false) { 
-        // if cookie exists get pb
-        if (false) {
+    if (document.cookie) {
+        let fields = {};
+        let cookieList = document.cookie.split("; ");
+        for (let items of cookieList) {
+            let cookie = items.split("=");
+            let name = cookie[0];
+            let value = cookie[1];
+            fields[name] = value;
+        }
+
+        if (fields.pb > numCorrect) {
             // if previous best is higher than current
-            numCorrectText.innerHTML += "\nPrevious best: " + "cookieval";
+            numCorrectText.innerHTML += "\nPrevious best: " + fields.pb;
         } else {
+            let maxAge = 60 * 60 * 24 * 10;
+
             numCorrectText.innerHTML += "\nNew personal best!";
+            document.cookie = `pb=${numCorrect}` + `;max-age=${maxAge}`;
             // save correct in cookie
         }
     } else {
         // else generate cookie
         numCorrectText.innerHTML += "\nNew personal best!";
+
+        let maxAge = 60 * 60 * 24 * 10;
+
+        document.cookie = `pb=${numCorrect}` + `;max-age=${maxAge}`;
     }
     
     
