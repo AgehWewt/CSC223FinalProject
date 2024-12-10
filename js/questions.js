@@ -29,11 +29,12 @@ export class Question {
      */
     generateHTML() {
         let questionForm = document.createElement("form");
-        questionForm.className = "qForm";
+        questionForm.classList.add("qForm");
+        questionForm.classList.add("container");
         
         let questionText = document.createElement("p");
         questionText.innerHTML = this.question;
-        questionText.className = "question";
+        questionText.classList.add("question");
         questionForm.appendChild(questionText);
 
         for(let i = 0; i < this.answers.length; i++) {
@@ -47,7 +48,7 @@ export class Question {
             answerInput.dataset.index = i;
             answerInput.required = true;
 
-            answerLabel.className = "answer";
+            answerLabel.classList.add("answer");
 
             answerLabel.appendChild(answerInput);
             answerLabel.appendChild(document.createTextNode(answer))

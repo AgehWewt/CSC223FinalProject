@@ -1,0 +1,50 @@
+html, body {
+    background-color: lightgrey;
+    
+    height: auto;
+    width: auto;
+    padding: 5px 10px;
+    margin-top: 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    border: 1px solid black;
+    border-radius: 16px;
+}
+
+
+.question {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 16px;
+    padding: 1em;
+    display: block;
+    width: fit-content;
+}
+
+.answer {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 16px;
+    padding: 0.4em;
+    display: inline-block;
+    width: fit-content;
+}
+
+.correct {
+    color: white;
+    background-color: green;
+    transition: color 0.5s;
+    transition: background-color 0.5s;
+}
+
+.incorrect {
+    color: lightgray;
+    background-color: red;
+    transition: color 0.5s;
+    transition: background-color 0.5s;
+
+}
